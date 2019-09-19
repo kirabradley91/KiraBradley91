@@ -34,7 +34,7 @@ def test_title(env_setup):
     driver.find_element_by_id('nav-open-btn').click()
     driver.find_element_by_partial_link_text("https://www.kingsford.com/country/").click()
     driver.find_element_by_class_name('btn-outline white').send_keys(Keys.ENTER)
-    blah
+    blah blah blah
 
 
 
