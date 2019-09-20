@@ -19,7 +19,7 @@ def env_setup():
 def test_title(env_setup):
     driver.get(base_url)
     assert driver.title == expected_title
-
+    # row_2 = driver.find_element_by_xpath("//table[@class='table1']/tbody/tr")
     table = driver.find_element_by_id('table1')
     rows = table.find_elements(By.TAG_NAME, "tr")
     all_cells = table.find_elements(By.TAG_NAME, "td")
@@ -33,8 +33,8 @@ def test_title(env_setup):
         print(row.text)
 
 
-    assert rows[0] == rows2[0]
-    assert rows[1] == rows2[1]
-    assert rows[2] == rows2[2]
-    assert rows[3] == rows2[3]
-    assert rows[4] == rows2[4]
+    assert rows[0].text == rows2[0].text
+    assert rows[1].text == rows2[1].text
+    assert rows[2].text == rows2[2].text
+    assert rows[3].text == rows2[3].text
+    assert rows[4].text == rows2[4].text
